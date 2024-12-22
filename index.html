@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dailies</title>
+    <style>
+        :root {
+            --primary-color: #dd44c2;
+            --black: #111;
+            --white: #fefefe;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--black);
+            color: #333;
+            text-align: center;
+        }
+        
+        h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 36px;
+            margin: 30px 0;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+        }
+
+        .section {
+            margin: 20px auto;
+            background: #444;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 500px;
+        }
+
+        .section h2 {
+            font-family: 'Space Mono', monospace;
+            font-size: 20px;
+            color: var(--white);
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--black);
+            background: #ccc;
+            border: 3px solid var(--black);
+            border-radius: 8px;
+            padding: 15px 20px;
+            transition: all 0.2s ease;
+            box-shadow: 4px 4px 0 var(--black);
+        }
+        
+        .button:hover {
+            translate: 4px 4px;
+            box-shadow: none;
+            background: var(--white);
+        }
+        
+        .button:active {
+            border: 3px solid var(--primary-color);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        footer a {
+            color: var(--primary-color);
+        }
+
+        footer a:hover {
+            color: var(--white);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dailies</h1>
+    <div class="section">
+        <h2>New York Times</h2>
+        <div class="button-container">
+            <a href="#" class="button">Wordle</a>
+            <a href="#" class="button">Connections</a>
+            <a href="#" class="button">Strands</a>
+            <a href="#" class="button">Mini</a>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Others</h2>
+        <div class="button-container">
+            <a href="#" class="button">PlusWord</a>
+            <a href="#" class="button">Gisnep</a>
+            <a href="#" class="button">Guess the Game</a>
+            <a href="#" class="button">Heardle</a>
+        </div>
+    </div>
+    <footer>
+        <a href="https://joesutherland.rocks/">Home</a>
+    </footer>
+</body>
+
+</html>
