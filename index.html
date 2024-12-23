@@ -23,7 +23,7 @@
             background-size: 20px 35px;
             background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
         }
-        
+
         h1 {
             font-family: 'Space Mono', monospace;
             font-size: 36px;
@@ -74,13 +74,17 @@
             transition: all 0.2s ease;
             box-shadow: 4px 4px 0 var(--black);
         }
-        
+
+        .button-center {
+            width: 100%;
+        }
+
         .button:hover {
             translate: 4px 4px;
             box-shadow: none;
             background: var(--white);
         }
-        
+
         .button:active {
             border: 3px solid var(--primary-color);
         }
@@ -104,6 +108,9 @@
 <body>
     <h1>Dailies</h1>
     <div class="section">
+        <button class="button button-center" onclick="openAll()">Open All Links</button>
+    </div>
+    <div class="section">
         <h2>New York Times</h2>
         <div class="button-container">
             <a href="https://www.nytimes.com/games/wordle/index.html" class="button">Wordle</a>
@@ -126,6 +133,14 @@
     <footer>
         <a href="https://joesutherland.rocks/">Home</a>
     </footer>
+    <script>
+        function openAll() {
+            const links = document.querySelectorAll('a.button');
+            links.forEach(link => {
+                window.open(link.href, '_blank');
+            });
+        }
+    </script>
 </body>
 
 </html>
